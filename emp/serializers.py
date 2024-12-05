@@ -25,7 +25,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employee
-        fields = ['id', 'name', 'email', 'role', 'department', 'date_joined', 'is_active', 'updated_at']
+        fields = ['id', 'name', 'email', 'role', 'department', 'date_joined', 'is_active', 'updated_at','profile']
     
     def validate_name(self, value):
         if not value.strip():

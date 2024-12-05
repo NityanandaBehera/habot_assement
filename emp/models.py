@@ -85,6 +85,7 @@ class Employee(models.Model):
         unique=True,
         blank=False
     )
+    profile=models.ImageField(upload_to='profile_pics/', null=True, blank=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='analyst')
     department = models.CharField(max_length=100, choices=DEPARTMENT_CHOICES, default='sales')
     date_joined = models.DateField(auto_now_add=True)

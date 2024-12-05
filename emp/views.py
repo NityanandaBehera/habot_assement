@@ -34,7 +34,7 @@ class UserLoginView(APIView):
             email=serializer.data.get('email')
             password=serializer.data.get('password')
             user=authenticate(request,email=email,password=password)
-            print(user)
+            # print(user)
             if user is not None:
                 token=get_tokens_for_user(user)
                 return Response({'token':token,'msg':"User login successfully"})
